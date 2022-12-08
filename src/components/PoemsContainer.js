@@ -6,12 +6,16 @@ function PoemsContainer({poem}) {
   return (
     <div className="poems-container">
       {
-        poem.map((poem)=>{
+        poem?.map((poem)=>{
           return(
             <div>
-              <Poem poem={poem}/>
-              <p>{poem.content}</p>
-              <p>{poem.author}</p>
+              <Poem 
+              title={poem.title}
+              content={poem.content}
+              author={poem.author}
+              />
+              {/* <p>{poem.content}</p>
+              <p>{poem.author}</p> */}
             </div>
           )
         })

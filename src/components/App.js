@@ -6,6 +6,7 @@ import Poem from "./Poem"
 
 function App() {
   const [poem, setPoem] = useState([])
+  const [show, setShow] = useState(false)
   // const [hidePoem, setHidePoem] = useState(false)
  
 
@@ -19,9 +20,10 @@ function App() {
     request()
   },[])
 
- const hidePoem =((hide)=>{
-  
- })
+
+ const show1 = () => {
+  setShow(!setShow)
+ }
  
  
 
@@ -29,7 +31,7 @@ function App() {
     <div className="app">
       <div className="sidebar">
       
-        <button>Show/hide new poem form</button>  
+        <button onClick={()=>{show1()}}>Show/hide new poem form</button>  
         {true ? <NewPoemForm /> : null}
       
       </div>

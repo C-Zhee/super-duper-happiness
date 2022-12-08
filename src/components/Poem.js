@@ -1,21 +1,15 @@
 import React from "react";
 
 
-function Poem({poem}) {
+function Poem({title, content, author}) {
   return (
     <div>
-      {
-      poem.map((poem)=>{
-        return (
           <div>
-          <h3>{poem.title}</h3>
-          <p>{poem.content}</p>
-          <p> <strong>-{poem.content}</strong></p>
+          <h3>{title}</h3>
+          <p>{content}</p>
+          <p> <strong>-{author}</strong></p>
           <button onClick >Mark as read</button>
           </div>
-      )
-      })
-    }
     </div>
   );
 }
